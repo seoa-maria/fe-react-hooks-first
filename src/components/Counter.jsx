@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Counter = () => {
   // useState를 사용하여 +1, -1 버튼을 눌렀을 때 값이 증가/감소 하는 것이 나타나도록 코드를 수정해주세요!
-  let count = 0;
+  const [count, setCount] = useState(0);
+  // const [상태변수, 상태 변화 함수] = useState(초기값);
 
   const handleDecrease = () => {
-    count = count - 1;
+    setCount(count - 1);
   };
 
   const handleIncrease = () => {
-    count = count + 1;
+    setCount(count + 1);
   };
 
   return (
